@@ -1,6 +1,6 @@
 from django.urls import path, include
-from .views import main
+from .views import PuzzleView
 
 urlpatterns = [
-    path("", main),
+    path("puzzles", PuzzleView.as_view()),
 ]
