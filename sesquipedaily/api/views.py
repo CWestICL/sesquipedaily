@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .models import Puzzle
+from .serializers import PuzzleSerializer
 
 
-# Create your views here.
-def main(request):
-    return HttpResponse("<h1>Hello<h1>")
+class PuzzleView(generics.CreateAPIView):
+    queryset = Puzzle.objects.all()
+    serializer_class = PuzzleSerializer
