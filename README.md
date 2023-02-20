@@ -1,1 +1,1 @@
-# Ses·quip·e·Daily
+# Ses · quip · e · Daily
