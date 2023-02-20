@@ -1,1 +1,1 @@
-# ses·quip·e·daily
+# Ses·quip·e·Daily
