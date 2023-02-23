@@ -5,7 +5,15 @@ from .models import Puzzle, Answer
 class PuzzleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Puzzle
-        fields = ("id", "puzzle", "created_at")
+        fields = (
+            "id",
+            "puzzle",
+            "day",
+            "solutions",
+            "scores",
+            "max_score",
+            "created_at",
+        )
 
 
 class CreatePuzzleSerializer(serializers.ModelSerializer):
