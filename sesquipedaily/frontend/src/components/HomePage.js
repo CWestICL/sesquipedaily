@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import DailyPuzzle from "./DailyPuzzle";
 import LeaderBoard from "./LeaderBoard";
+import Register from "./Register";
+import Login from "./Login";
 
 import {
     BrowserRouter as Router,
@@ -21,9 +23,10 @@ export default class HomePage extends Component {
             <Router>
                 <Routes>
                     <Route path="/" element={<p>This is the home page!</p>} />
-
                     <Route path="/daily" element={<DailyPuzzle />} />
                     <Route path="/leaderboard" element={<LeaderBoard />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/login" element={<Login />} />
                 </Routes>
             </Router>
         );

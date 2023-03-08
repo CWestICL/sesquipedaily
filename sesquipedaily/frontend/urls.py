@@ -5,4 +5,6 @@ urlpatterns = [
     path("", index),
     path("daily", index),
     path("leaderboard", index),
+    path("register", index),
+    path("login", index),
 ]
