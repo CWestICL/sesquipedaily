@@ -1,7 +1,16 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import reactLogo from './assets/react.svg'
 import './App.css'
 
+import Layout from "./hocs/Layout"
+
+import Home from "./containers/Home"
+import Register from "./containers/Register"
+import Login from "./containers/Login"
+import Dashboard from "./containers/Dashboard"
+
+/*
 function App() {
   const [count, setCount] = useState(0)
 
@@ -30,5 +39,43 @@ function App() {
     </div>
   )
 }
+
+const App = () => (
+  <Router>
+    <Layout>
+      <Route path="/" element={<Home />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Layout>
+  </Router>
+);
+
+const App = () => (
+  <Router>
+    <Layout>
+      <Route path="/" element={<p>Home</p>} />
+      <Route path="/register" element={<p>Register</p>} />
+      <Route path="/login" element={<p>Login</p>} />
+      <Route path="/dashboard" element={<p>Dashboard</p>} />
+    </Layout>
+  </Router>
+);
+
+*/
+
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<p>Page not found</p>} />
+      </Route>
+    </Routes>
+  </Router>
+);
 
 export default App
