@@ -18,3 +18,23 @@ body {
   height: 100%;
   display: flex;
 }
+
+.merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+.answer-display {
+  min-height: 180PX;
+}
+
+.button-grid-row {
+  min-height: 80PX;
+}
+
+.grid-button {
+  font-size: 1.2em;
+}
+
+.leaderboard-cell {
+  color: white;
+}
